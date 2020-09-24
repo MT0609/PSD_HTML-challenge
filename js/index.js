@@ -35,3 +35,12 @@ techChoice.forEach((item, i) => {
     techChoice[i].classList.add("technology__choice--selected");
   });
 });
+
+// --- //
+let submitButton = document.querySelectorAll("input[type=submit]");
+submitButton = [...submitButton];
+submitButton.map((btn) =>
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+  })
+);

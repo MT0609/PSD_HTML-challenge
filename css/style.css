@@ -60,6 +60,7 @@ a {
   background-color: #0586e9;
   color: #ffffff;
   box-shadow: -5px -5px 3px #f6f6f7, 5px 5px 5px #dbcaf3;
+  cursor: pointer;
 }
 .form--boxshadow {
   padding: 2.2rem 2.6rem 2.8rem 2.6rem;
@@ -102,12 +103,16 @@ a {
 .intro__left {
   padding-top: 10rem;
   max-width: 60rem;
+  width: 50%;
   margin-right: auto;
 }
 .intro__left h1 {
   margin-bottom: 4.3rem;
   font-size: 5rem;
   max-width: 55.3rem;
+}
+.intro__right {
+  width: 50%;
 }
 .intro__right .form__title {
   margin-right: auto;
@@ -116,6 +121,7 @@ a {
 .intro__right .form p {
   margin-top: 2rem;
   max-width: 45rem;
+  margin-right: auto;
 }
 
 .about {
@@ -387,7 +393,7 @@ a {
 .remark__btn {
   position: absolute;
   top: 50%;
-  transform: translateX(-50%);
+  transform: translateY(-50%);
   padding: 1.2rem 1.2rem;
   background-color: transparent;
   outline: none;
@@ -456,6 +462,216 @@ a {
 
 .copyright {
   font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .intro__left {
+    max-width: 37rem;
+  }
+
+  .about__text {
+    right: 0;
+    max-width: 55rem;
+    max-height: 55rem;
+    overflow-y: scroll;
+  }
+
+  .achievement__statistic {
+    padding-left: 2rem;
+    width: fit-content;
+  }
+
+  .workflow__process {
+    padding: 3.3rem 2rem;
+  }
+
+  .remark__detail {
+    max-width: 60rem;
+  }
+
+  .contact__map {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+@media screen and (max-width: 770px) {
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .form input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+  }
+
+  .intro {
+    align-items: center;
+  }
+  .intro__left {
+    padding-top: 0;
+    max-width: 40%;
+  }
+  .intro__left h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .intro__right {
+    margin-top: 1rem;
+  }
+  .intro__right .form p {
+    max-width: 100%;
+  }
+
+  .workflow .process {
+    width: 15rem;
+    height: 15rem;
+  }
+  .workflow .process__phase {
+    top: 1rem;
+    padding: 1rem;
+  }
+  .workflow .process img {
+    margin-bottom: 1rem;
+  }
+
+  .clients {
+    padding: 6.8rem 2rem;
+  }
+  .clients__container {
+    margin-top: 2rem;
+  }
+
+  .technology__container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .remark__container {
+    padding: 0;
+  }
+  .remark__btn--left {
+    left: 5rem;
+  }
+  .remark__btn--right {
+    right: 5rem;
+  }
+
+  .contact {
+    padding: 2.9rem 2rem 4rem 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .form--boxshadow {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem 1rem;
+  }
+  .form__caption {
+    text-align: left;
+  }
+
+  .header {
+    padding: 5rem 1rem;
+  }
+
+  .intro {
+    padding: 0;
+    text-align: center;
+    flex-direction: column;
+  }
+  .intro__left {
+    padding-top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .intro__left h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  .intro__right {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .intro__right .form p {
+    max-width: 100%;
+  }
+
+  .about {
+    padding: 0;
+  }
+  .about__detail img {
+    width: 100%;
+  }
+  .about__text {
+    padding: 1rem 1rem 1rem 1rem;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .clients {
+    padding: 2rem 1rem;
+  }
+  .clients__container {
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+  .clients__slide img {
+    max-width: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .clients__buttons {
+    margin-top: 0;
+  }
+
+  .achievement__statistic {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .achievement__introtext {
+    padding-left: 1rem;
+  }
+
+  .statistic__number {
+    margin-top: 1rem;
+  }
+  .statistic__caption {
+    margin-bottom: 1rem;
+  }
+
+  .technology__container {
+    max-height: 40rem;
+    overflow-y: scroll;
+  }
+  .technology__tool, .technology__tech {
+    width: 50%;
+  }
+
+  .remark__detail {
+    max-width: 40%;
+  }
+
+  .contact__detail {
+    flex-direction: column;
+  }
+  .contact__left, .contact__right {
+    width: 100%;
+  }
+
+  .footer {
+    margin: 0 auto;
+  }
+  .footer .copyright {
+    max-width: 60%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
