@@ -20,3 +20,18 @@ for (let i = 0; i < buttons.length; i++) {
     slides[i].style.display = "flex";
   });
 }
+
+// ---- //
+let techChoice = document.querySelectorAll(".technology__choice");
+techChoice = [...techChoice];
+
+techChoice[0].classList.add("technology__choice--selected"); // initialize the development tools to be selected
+
+techChoice.forEach((item, i) => {
+  techChoice[i].addEventListener("click", function () {
+    techChoice.map((label) =>
+      label.classList.remove("technology__choice--selected")
+    );
+    techChoice[i].classList.add("technology__choice--selected");
+  });
+});

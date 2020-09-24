@@ -292,23 +292,38 @@ a {
     @include flex;
   }
   &__choice {
-    padding: 2rem 4.8rem;
+    padding: 2rem 4.7rem;
     border-bottom: 2px solid black;
     cursor: pointer;
     &--selected {
+      padding: 2rem 2rem;
       color: #0586e9;
       font-weight: 700;
       border-bottom-color: inherit;
     }
   }
-  &__techs {
-    margin: 0 -50px;
-    width: 100%;
-    padding-left: 11.5rem;
-    padding-right: 11.5rem;
-    @include flex(flex-start, center, wrap);
+  &__container {
+    margin-left: 11.5rem;
+    margin-right: 11.5rem;
+    height: 43rem;
+    overflow: hidden;
+    input {
+      display: none;
+    }
   }
-  &__tech {
+  &__container > div {
+    width: 200%;
+    height: 100%;
+    display: flex;
+  }
+  &__option {
+    width: 50%;
+    height: 100%;
+    @include flex(flex-start, center, wrap);
+    transition: 0.6s;
+  }
+  &__tech,
+  &__tool {
     @include flex();
     flex-direction: column;
     margin-top: 5rem;
@@ -320,7 +335,12 @@ a {
     }
   }
 }
-
+#radio__tool:checked ~ .technology__tools {
+  margin-left: 0;
+}
+#radio__tech:checked ~ .technology__tools {
+  margin-left: -50%;
+}
 .remark {
   margin-top: 6rem;
   text-align: center;

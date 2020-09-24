@@ -311,26 +311,40 @@ a {
   flex-wrap: nowrap;
 }
 .technology__choice {
-  padding: 2rem 4.8rem;
+  padding: 2rem 4.7rem;
   border-bottom: 2px solid black;
   cursor: pointer;
 }
 .technology__choice--selected {
+  padding: 2rem 2rem;
   color: #0586e9;
   font-weight: 700;
   border-bottom-color: inherit;
 }
-.technology__techs {
-  margin: 0 -50px;
-  width: 100%;
-  padding-left: 11.5rem;
-  padding-right: 11.5rem;
+.technology__container {
+  margin-left: 11.5rem;
+  margin-right: 11.5rem;
+  height: 43rem;
+  overflow: hidden;
+}
+.technology__container input {
+  display: none;
+}
+.technology__container > div {
+  width: 200%;
+  height: 100%;
+  display: flex;
+}
+.technology__option {
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  transition: 0.6s;
 }
-.technology__tech {
+.technology__tech, .technology__tool {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -339,10 +353,18 @@ a {
   margin-top: 5rem;
   width: 20%;
 }
-.technology__tech img {
+.technology__tech img, .technology__tool img {
   max-width: 10rem;
   max-height: 10rem;
   margin-bottom: 3rem;
+}
+
+#radio__tool:checked ~ .technology__tools {
+  margin-left: 0;
+}
+
+#radio__tech:checked ~ .technology__tools {
+  margin-left: -50%;
 }
 
 .remark {
