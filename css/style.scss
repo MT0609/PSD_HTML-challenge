@@ -64,7 +64,7 @@ a {
     border: 0;
   }
   .input--selected {
-    box-shadow: 0 1px 5px 0 #e3e5ea; /* Border top */
+    box-shadow: inset 7px 4px 10px 1px #e3e5ea, inset -4px -3px 10px 2px #f6f6f8;
   }
   input[type="submit"] {
     padding-left: 0;
@@ -103,9 +103,17 @@ a {
 }
 
 .intro {
+  position: relative;
   @include flex(center, stretch);
   padding-left: 11.6rem;
   padding-right: 11.3rem;
+  &__background {
+    position: absolute;
+    top: -5rem;
+    left: 4.8rem;
+    object-fit: cover;
+    z-index: 0;
+  }
   &__left {
     padding-top: 10rem;
     h1 {
@@ -116,9 +124,11 @@ a {
     max-width: 60rem;
     width: 50%;
     margin-right: auto;
+    z-index: 1;
   }
   &__right {
     width: 50%;
+    z-index: 1;
     .form {
       &__title {
         margin-right: auto;
@@ -218,7 +228,8 @@ a {
   }
   &__process {
     padding: 3.3rem 12.3rem;
-    background: url("/assets/image/workflow_background.png");
+    background-image: url("../assets/image/workflow_background.png");
+    background-size: cover;
     img {
       margin-bottom: 2.7rem;
     }
@@ -439,10 +450,16 @@ a {
 }
 
 .contact {
-  padding: 2.9rem 11.7rem 4.6rem 11.4rem;
+  // padding: 2.9rem 11.7rem 4.6rem 11.4rem;
+  padding-top: 2.9rem;
+  padding-left: 11.7rem;
+  padding-right: 11.4rem;
   background-color: #e9e9e9;
   &__detail {
     @include flex(space-between);
+    margin-top: 4.4rem;
+    padding-bottom: 4.6rem;
+    border-bottom: 1px solid black;
   }
   &__left {
     width: 46rem;
@@ -466,12 +483,12 @@ a {
 }
 
 .footer {
-  margin-left: 11.3rem;
-  margin-right: 11.3rem;
+  padding-left: 11.3rem;
+  padding-right: 11.3rem;
   padding-top: 3.2rem;
   padding-bottom: 2.8rem;
+  background-color: #e9e9e9;
   @include flex(space-between);
-  border-top: 1px solid black;
   &__logo {
     width: 8rem;
     height: 8rem;
@@ -484,6 +501,11 @@ a {
 
 @media screen and (max-width: 1024px) {
   .intro {
+    &__background {
+      left: -1rem;
+      width: 80%;
+      height: 100%;
+    }
     &__left {
       max-width: 37rem;
     }
@@ -532,6 +554,8 @@ a {
     }
   }
   .intro {
+    padding-left: 5rem;
+    padding-right: 5rem;
     align-items: center;
     &__left {
       padding-top: 0;
@@ -591,7 +615,8 @@ a {
     }
   }
   .contact {
-    padding: 2.9rem 2rem 4rem 2rem;
+    padding: 2.9rem 2rem;
+    padding-bottom: 0;
   }
 }
 
@@ -613,6 +638,9 @@ a {
     padding: 0;
     text-align: center;
     flex-direction: column;
+    &__background {
+      display: none;
+    }
     &__left {
       padding-top: 0;
       width: 100%;
@@ -706,6 +734,12 @@ a {
       max-height: 40rem;
       overflow-y: scroll;
     }
+    &__choice {
+      padding: 2rem 2rem;
+      &--selected {
+        padding: 2rem 3rem;
+      }
+    }
     &__tool,
     &__tech {
       width: 50%;
@@ -737,7 +771,8 @@ a {
     }
   }
   .footer {
-    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
     .copyright {
       max-width: 60%;
       text-align: center;

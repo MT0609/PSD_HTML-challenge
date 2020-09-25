@@ -47,28 +47,24 @@ for (let i = 0; i < remarkNavBar.length; i++) {
   });
 }
 
-let prevRemark = document.querySelector(".remark__btn--left");
-let nextRemark = document.querySelector(".remark__btn--right");
-let remarkSlides = document.querySelector(".remark__container > div");
-
-prevRemark.addEventListener("click", () => {
-  // remarkSlides.style.margin = "0 -50%";
-  remarkSlides.style.transform = "translateX(-20%)";
-});
-nextRemark.addEventListener("click", () => {
-  // ...
-});
+// let prevRemark = document.querySelector(".remark__btn--left");
+// let nextRemark = document.querySelector(".remark__btn--right");
+// let remarkSlides = document.querySelector(".remark__container > div");
+// prevRemark.addEventListener("click", () => {});
+// nextRemark.addEventListener("click", () => {});
 
 // --- //
 let inputButton = document.querySelectorAll("input:not([type=submit])");
 inputButton = [...inputButton];
-inputButton.map((btn) =>
-  btn.addEventListener("click", () => {
+inputButton.map((btn) => {
+  btn.addEventListener("focus", () => {
     inputButton.map((btn) => btn.classList.remove("input--selected"));
     btn.classList.add("input--selected");
-    console.log(111);
-  })
-);
+  });
+  btn.addEventListener("blur", () => {
+    inputButton.map((btn) => btn.classList.remove("input--selected"));
+  });
+});
 
 let submitButton = document.querySelectorAll("input[type=submit]");
 submitButton = [...submitButton];
