@@ -40,7 +40,12 @@
               <strong>Free Consultation</strong> or to learn more about our
               services.
             </p>
-            <input type="text" name="name" placeholder="Full Name" />
+            <input
+              class="input--selected"
+              type="text"
+              name="name"
+              placeholder="Full Name"
+            />
             <input type="email" name="email" placeholder="Email Id" />
             <input
               type="text"
@@ -333,13 +338,61 @@
       <div class="remark">
         <h2 class="title">WHAT PEOPLE SAY</h2>
         <div class="remark__container">
-          <div class="remark__one">
-            <p class="remark__detail">
-              Adsandurl didn't make tall promises. They understood my
-              perspective and constraints and produced a bang-on product.
-            </p>
-            <div class="remark__writer">
-              <strong>Rachal Jones |</strong> Offlince Recharge
+          <div>
+            <input
+              type="radio"
+              name="radio__remark"
+              id="radio__remark1"
+              checked
+            />
+            <input type="radio" name="radio__remark" id="radio__remark2" />
+            <input type="radio" name="radio__remark" id="radio__remark3" />
+            <input type="radio" name="radio__remark" id="radio__remark4" />
+            <input type="radio" name="radio__remark" id="radio__remark5" />
+            <div class="remark__slide remark__slide--first">
+              <p class="remark__detail">
+                Adsandurl didn't make tall promises. They understood my
+                perspective and constraints and produced a bang-on product.
+              </p>
+              <div class="remark__writer">
+                <strong>Rachal Jones |</strong> Offlince Recharge
+              </div>
+            </div>
+            <div class="remark__slide">
+              <p class="remark__detail">
+                Lor didn't make tall promises. They understood my perspective
+                and constraints and produced a bang-on product.
+              </p>
+              <div class="remark__writer">
+                <strong>Rachal Jones |</strong> Offlince Recharge
+              </div>
+            </div>
+            <div class="remark__slide">
+              <p class="remark__detail">
+                Kitty didn't make tall promises. They understood my perspective
+                and constraints and produced a bang-on product.
+              </p>
+              <div class="remark__writer">
+                <strong>Rachal Jones |</strong> Offlince Recharge
+              </div>
+            </div>
+            <div class="remark__slide">
+              <p class="remark__detail">
+                Benny didn't make tall promises. They understood my perspective
+                and constraints and produced a bang-on product.
+              </p>
+              <div class="remark__writer">
+                <strong>Rachal Jones |</strong> Offlince Recharge
+              </div>
+            </div>
+            <div class="remark__slide">
+              <p class="remark__detail">
+                Sonny didn't make tall promises. They understood my perspective
+                and constraints and produced a bang-on product.
+              </p>
+              <div class="remark__writer">
+                <strong>Rachal Jones |</strong> Offlince Recharge
+              </div>
             </div>
           </div>
           <button class="remark__btn remark__btn--left">
@@ -348,6 +401,15 @@
           <button class="remark__btn remark__btn--right">
             <i class="fas fa-chevron-right"></i>
           </button>
+          <div class="remark__navbar">
+            <label for="radio__remark1">
+              <div class="remark__bar remark__bar--selected"></div
+            ></label>
+            <label for="radio__remark2"><div class="remark__bar"></div></label>
+            <label for="radio__remark3"><div class="remark__bar"></div></label>
+            <label for="radio__remark4"><div class="remark__bar"></div></label>
+            <label for="radio__remark5"><div class="remark__bar"></div></label>
+          </div>
         </div>
       </div>
       <div class="contact">
@@ -357,35 +419,6 @@
             <p class="contact__location">
               <strong>Location</strong> Lorem ipsum dolor sit amet
             </p>
-            <!-- <div class="contact__map">
-              <div class="gmap_canvas">
-                <iframe
-                  width="435"
-                  height="310"
-                  id="gmap_canvas"
-                  src="https://maps.google.com/maps?q=new%20delhi&t=&z=3&ie=UTF8&iwloc=&output=embed"
-                  frameborder="0"
-                  scrolling="no"
-                  marginheight="0"
-                  marginwidth="0"
-                ></iframe
-                ><a href="https://123movies-to.org">movies 123</a>
-              </div>
-              <style>
-                .mapouter {
-                  position: relative;
-                  text-align: right;
-                  height: 310px;
-                  width: 435px;
-                }
-                .gmap_canvas {
-                  overflow: hidden;
-                  background: none !important;
-                  height: 310px;
-                  width: 435px;
-                }
-              </style>
-            </div> -->
             <iframe
               class="contact__map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58780656.371077165!2d86.08013046523659!3d25.945515107322542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2s!4v1600962462097!5m2!1sen!2s"

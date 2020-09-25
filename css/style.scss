@@ -63,6 +63,9 @@ a {
     outline: none;
     border: 0;
   }
+  .input--selected {
+    box-shadow: 0 1px 5px 0 #e3e5ea; /* Border top */
+  }
   input[type="submit"] {
     padding-left: 0;
     text-align: center;
@@ -345,6 +348,7 @@ a {
 #radio__tech:checked ~ .technology__tools {
   margin-left: -50%;
 }
+
 .remark {
   margin-top: 6rem;
   text-align: center;
@@ -352,6 +356,20 @@ a {
     position: relative;
     padding-top: 5.5rem;
     padding-bottom: 6rem;
+    overflow: hidden;
+    & > div {
+      width: 500%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      input {
+        display: none;
+      }
+    }
+  }
+  &__slide {
+    width: 20%;
+    transition: 0.6s;
   }
   &__detail {
     margin: auto;
@@ -367,7 +385,6 @@ a {
     transform: translateY(-50%);
     padding: 1.2rem 1.2rem;
     @include button();
-    // border: 1px solid darkblue;
     border-radius: 50%;
     width: 4rem;
     color: #2092ea;
@@ -379,6 +396,46 @@ a {
       right: 11.5rem;
     }
   }
+  &__navbar {
+    @include flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 0.5rem;
+    bottom: 20%;
+  }
+  &__bar {
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 0.5rem;
+    background-color: #c1dbef;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    &--selected {
+      width: 4.5rem;
+      background-color: #0586e9;
+    }
+    label {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+#radio__remark1:checked ~ .remark__slide--first {
+  margin-left: 0;
+}
+#radio__remark2:checked ~ .remark__slide--first {
+  margin-left: -20%;
+}
+#radio__remark3:checked ~ .remark__slide--first {
+  margin-left: -40%;
+}
+#radio__remark4:checked ~ .remark__slide--first {
+  margin-left: -60%;
+}
+#radio__remark5:checked ~ .remark__slide--first {
+  margin-left: -80%;
 }
 
 .contact {
@@ -529,6 +586,9 @@ a {
         right: 5rem;
       }
     }
+    &__navbar {
+      margin-bottom: -0.4rem;
+    }
   }
   .contact {
     padding: 2.9rem 2rem 4rem 2rem;
@@ -547,7 +607,7 @@ a {
     }
   }
   .header {
-    padding: 5rem 1rem;
+    padding: 1rem 1rem;
   }
   .intro {
     padding: 0;
@@ -561,6 +621,10 @@ a {
         margin-bottom: 1rem;
         text-align: center;
         font-size: 3rem;
+      }
+      p {
+        margin: auto;
+        max-width: 90%;
       }
     }
     &__right {
@@ -583,6 +647,23 @@ a {
       max-width: 80%;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+  .workflow {
+    .process {
+      font-size: 1rem;
+      width: calc(20%);
+      height: 12rem;
+      &__phase {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &__image {
+        max-width: 2rem;
+        max-height: 2rem;
+      }
     }
   }
   .clients {
@@ -620,6 +701,7 @@ a {
     }
   }
   .technology {
+    text-align: center;
     &__container {
       max-height: 40rem;
       overflow-y: scroll;
@@ -627,11 +709,19 @@ a {
     &__tool,
     &__tech {
       width: 50%;
+      img {
+        margin-bottom: 1rem;
+        max-width: 8rem;
+        max-height: 8rem;
+      }
     }
   }
   .remark {
     &__detail {
       max-width: 40%;
+    }
+    &__navbar {
+      margin-bottom: -3rem;
     }
   }
   .contact {
@@ -642,12 +732,44 @@ a {
     &__right {
       width: 100%;
     }
+    &__map {
+      width: 100%;
+    }
   }
   .footer {
     margin: 0 auto;
     .copyright {
       max-width: 60%;
       text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .header {
+    &__btn {
+      padding: inherit;
+    }
+  }
+  .technology {
+    &__choice {
+      padding: 1rem;
+      text-align: center;
+      &--selected {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+  .remark {
+    &__detail {
+      font-size: 1.6rem;
+    }
+    &__btn {
+      &--left {
+        left: 2rem;
+      }
+      &--right {
+        right: 2rem;
+      }
     }
   }
 }
