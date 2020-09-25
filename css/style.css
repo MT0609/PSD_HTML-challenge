@@ -244,7 +244,7 @@ a {
 
 .process {
   position: relative;
-  width: 22.1rem;
+  width: 20%;
   height: 22.1rem;
   display: flex;
   justify-content: center;
@@ -260,9 +260,21 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  position: relative;
 }
 .process__row:first-child {
   margin-bottom: 3rem;
+}
+.process__rowconnect {
+  position: absolute;
+  top: calc(50% - 2px);
+  right: -5rem;
+}
+.process__rowconnect > img {
+  margin-bottom: 0;
+}
+.process__row:nth-child(2) {
+  flex-direction: row-reverse;
 }
 .process__phase {
   position: absolute;
@@ -273,6 +285,16 @@ a {
   border-radius: 50%;
   color: #0586e9;
   font-weight: 700;
+}
+.process__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 94%;
+  z-index: 1;
+}
+.process__arrow > img {
+  margin-bottom: 0;
 }
 
 .clients {
@@ -571,7 +593,7 @@ a {
   }
 
   .workflow__process {
-    padding: 3.3rem 2rem;
+    padding: 3.3rem 6rem;
   }
 
   .remark__detail {
@@ -615,6 +637,9 @@ a {
     max-width: 100%;
   }
 
+  .workflow__process {
+    padding: 3.3rem 2rem;
+  }
   .workflow .process {
     width: 15rem;
     height: 15rem;
@@ -625,6 +650,10 @@ a {
   }
   .workflow .process img {
     margin-bottom: 1rem;
+  }
+
+  .process__arrow, .process__rowconnect {
+    display: none;
   }
 
   .clients {
@@ -838,6 +867,12 @@ a {
   }
   .technology__choice--selected {
     padding: 1rem 2rem;
+  }
+
+  .workflow .process__phase {
+    padding: 0;
+    background: none;
+    font-size: 1rem;
   }
 
   .remark__detail {

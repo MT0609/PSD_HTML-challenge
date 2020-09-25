@@ -242,7 +242,7 @@ a {
 }
 .process {
   position: relative;
-  width: 22.1rem;
+  width: 20%;
   height: 22.1rem;
   @include flex;
   flex-direction: column;
@@ -251,9 +251,21 @@ a {
   font-size: 1.6rem;
   &__row {
     @include flex(space-between);
+    position: relative;
     &:first-child {
       margin-bottom: 3rem;
     }
+    &connect {
+      > img {
+        margin-bottom: 0;
+      }
+      position: absolute;
+      top: calc(50% - 2px);
+      right: -5rem;
+    }
+  }
+  &__row:nth-child(2) {
+    flex-direction: row-reverse;
   }
   &__phase {
     position: absolute;
@@ -264,6 +276,16 @@ a {
     border-radius: 50%;
     color: #0586e9;
     font-weight: 700;
+  }
+  &__arrow {
+    > img {
+      margin-bottom: 0;
+    }
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 94%;
+    z-index: 1;
   }
 }
 
@@ -528,7 +550,7 @@ a {
   }
   .workflow {
     &__process {
-      padding: 3.3rem 2rem;
+      padding: 3.3rem 6rem;
     }
   }
   .remark {
@@ -576,6 +598,9 @@ a {
     }
   }
   .workflow {
+    &__process {
+      padding: 3.3rem 2rem;
+    }
     .process {
       width: 15rem;
       height: 15rem;
@@ -586,6 +611,12 @@ a {
       img {
         margin-bottom: 1rem;
       }
+    }
+  }
+  .process {
+    &__arrow,
+    &__rowconnect {
+      display: none;
     }
   }
   .clients {
@@ -805,6 +836,15 @@ a {
       text-align: center;
       &--selected {
         padding: 1rem 2rem;
+      }
+    }
+  }
+  .workflow {
+    .process {
+      &__phase {
+        padding: 0;
+        background: none;
+        font-size: 1rem;
       }
     }
   }
