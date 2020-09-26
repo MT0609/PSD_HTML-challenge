@@ -263,12 +263,12 @@ a {
   position: relative;
 }
 .process__row:first-child {
-  margin-bottom: 3rem;
+  margin-bottom: 2.8rem;
 }
 .process__rowconnect {
   position: absolute;
-  top: calc(50% - 2px);
-  right: -5rem;
+  top: calc(50% - 3px);
+  right: -4.5rem;
 }
 .process__rowconnect > img {
   margin-bottom: 0;

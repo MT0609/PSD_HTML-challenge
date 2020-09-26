@@ -253,15 +253,15 @@ a {
     @include flex(space-between);
     position: relative;
     &:first-child {
-      margin-bottom: 3rem;
+      margin-bottom: 2.8rem;
     }
     &connect {
       > img {
         margin-bottom: 0;
       }
       position: absolute;
-      top: calc(50% - 2px);
-      right: -5rem;
+      top: calc(50% - 3px);
+      right: -4.5rem;
     }
   }
   &__row:nth-child(2) {
